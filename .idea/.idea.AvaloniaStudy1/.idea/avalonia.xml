@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="AvaloniaDemo1/App.axaml" value="AvaloniaDemo1/AvaloniaDemo1.csproj" />
+        <entry key="AvaloniaDemo1/Views/AddSingleItemView.axaml" value="AvaloniaDemo1/AvaloniaDemo1.csproj" />
+        <entry key="AvaloniaDemo1/Views/CalendarView.axaml" value="AvaloniaDemo1/AvaloniaDemo1.csproj" />
+        <entry key="AvaloniaDemo1/Views/HomeView.axaml" value="AvaloniaDemo1/AvaloniaDemo1.csproj" />
+        <entry key="AvaloniaDemo1/Views/MainWindow.axaml" value="AvaloniaDemo1/AvaloniaDemo1.csproj" />
+        <entry key="AvaloniaDemo1/Views/ManageView.axaml" value="AvaloniaDemo1/AvaloniaDemo1.csproj" />
+        <entry key="AvaloniaDemo1/Views/Page1.axaml" value="AvaloniaDemo1/AvaloniaDemo1.csproj" />
+        <entry key="AvaloniaDemo1/Views/Page2.axaml" value="AvaloniaDemo1/AvaloniaDemo1.csproj" />
+        <entry key="AvaloniaDemo1/Views/StatisticsView.axaml" value="AvaloniaDemo1/AvaloniaDemo1.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

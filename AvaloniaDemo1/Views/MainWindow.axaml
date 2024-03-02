@@ -1,0 +1,110 @@
+<Window
+    Height="800"
+    Icon="/Assets/avalonia-logo.ico"
+    Title="AvaloniaDemo1"
+    Width="1300"
+    mc:Ignorable="d"
+    x:Class="AvaloniaDemo1.Views.MainWindow"
+    x:DataType="viewModels:MainWindowViewModel"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:AvaloniaDemo1.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Window.Styles>
+        <Style Selector="Button.NavBtn">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="CornerRadius" Value="15" />
+            <Setter Property="FontSize" Value="19" />
+            <Setter Property="Width" Value="80" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Command" Value="{Binding NavBtnCommand}" />
+            <Setter Property="CommandParameter" Value="{Binding $self.CommandParameter}" />
+        </Style>
+    </Window.Styles>
+
+    <Border
+        Background="Azure"
+        BorderThickness="2"
+        CornerRadius="5">
+        <Grid RowDefinitions="*,8*,1.5*">
+            <!--  顶部引导  -->
+            <Grid
+                ColumnDefinitions="2*,4*,5*"
+                Grid.Row="0"
+                Margin="0,0,0,8">
+                <Panel Background="Transparent" Grid.Column="0">
+                    <Image
+                        Height="50"
+                        HorizontalAlignment="Center"
+                        Source="../../Assets/AppImageLauncher.ico"
+                        VerticalAlignment="Center"
+                        Width="50" />
+                </Panel>
+                <Panel Background="Transparent" Grid.Column="1">
+                    <TextBlock
+                        FontSize="22"
+                        FontStyle="Oblique"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                        Aback 的可视化菜单记账软件
+                    </TextBlock>
+                </Panel>
+                <Grid
+                    ColumnDefinitions="*,*,*,*,*"
+                    Grid.Column="2"
+                    Margin="25,0,15,0">
+                    <Button
+                        Classes="NavBtn"
+                        CommandParameter="1"
+                        Grid.Column="0">
+                        <Button.Content>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">主页</TextBlock>
+                        </Button.Content>
+                    </Button>
+                    <Button
+                        Classes="NavBtn"
+                        CommandParameter="2"
+                        Grid.Column="1">
+                        <Button.Content>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">日历</TextBlock>
+                        </Button.Content>
+                    </Button>
+                    <Button
+                        Classes="NavBtn"
+                        CommandParameter="3"
+                        Grid.Column="2">
+                        <Button.Content>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">统计</TextBlock>
+                        </Button.Content>
+                    </Button>
+                    <Button
+                        Classes="NavBtn"
+                        CommandParameter="4"
+                        Grid.Column="3">
+                        <Button.Content>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">管理</TextBlock>
+                        </Button.Content>
+                    </Button>
+                    <Button
+                        Classes="NavBtn"
+                        CommandParameter="5"
+                        Grid.Column="4">
+                        <Button.Content>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">新增</TextBlock>
+                        </Button.Content>
+                    </Button>
+                </Grid>
+            </Grid>
+            <!--  中间替换导航视图内容  -->
+            <ContentControl Content="{Binding CurrentViewModel}" Grid.Row="1" />
+            <!--  底部显示框  -->
+            <StackPanel Background="Cornsilk" Grid.Row="2">
+                <!-- <Button>替换</Button> -->
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
